@@ -2,11 +2,25 @@
 <html>
 <head>
   <title>Template1</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<nav id="nav-main-wrap">
+		<a href="/" id="nav-logo-link"><%= image_tag('TEMP-LOGO.jpg', id: 'nav-logo-img', alt: '[TEMP LOGO]') %></a>
+		<ul id="nav-main-list">
+			<li class="nav-main-item">
+				<a href="/about" class="nav-main-link">ABOUT</a>
+			</li>
+			<li class="nav-main-item">
+				<a href="/contact" class="nav-main-link">CONTACT</a>
+			</li>
+			<li class="nav-main-item">
+				<a href="#" class="nav-main-link">[OTHER NAV LINKS HERE]</a>
+			</li>
+		</ul>
+	</nav>
 
 <%= yield %>
 
